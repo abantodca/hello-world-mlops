@@ -29,10 +29,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Train and save the model
+      - name: Train the model
         run: |
-          python train_save_model.py
-          ls -la artifacts
+           python train.py
+           ls -la artifacts
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
